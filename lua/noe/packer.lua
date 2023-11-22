@@ -12,6 +12,7 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	use({ 'rose-pine/neovim', as = 'rose-pine' })
+    use({'folke/tokyonight.nvim', as = 'tokyonight'})
 	use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use( 'theprimeagen/harpoon')
 	use( 'mbbill/undotree')
@@ -24,12 +25,16 @@ return require('packer').startup(function(use)
 			{'williamboman/mason.nvim'},
 			{'williamboman/mason-lspconfig.nvim'},
 
-			-- LSP Support
-			{'neovim/nvim-lspconfig'},
-			-- Autocompletion
-			{'hrsh7th/nvim-cmp'},
-			{'hrsh7th/cmp-nvim-lsp'},
-			{'L3MON4D3/LuaSnip'},
-		}
-	}
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-nvim-lsp'},
+            {'L3MON4D3/LuaSnip'},
+        }
+    }
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 end)
