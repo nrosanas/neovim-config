@@ -17,7 +17,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'tsserver','lua_ls', 'rust_analyzer', 'clangd', 'dockerls', 'docker_compose_language_service', 'jedi_language_server' },
+  ensure_installed = {'lua_ls', 'rust_analyzer', 'clangd', 'dockerls', 'docker_compose_language_service', 'jedi_language_server' },
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()

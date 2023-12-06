@@ -14,6 +14,7 @@ return require('packer').startup(function(use)
 	use({ 'rose-pine/neovim', as = 'rose-pine' })
     use({'folke/tokyonight.nvim', as = 'tokyonight'})
 	use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+	use "nvim-lua/plenary.nvim"
 	use( 'theprimeagen/harpoon')
 	use( 'mbbill/undotree')
 	use( 'tpope/vim-fugitive')
